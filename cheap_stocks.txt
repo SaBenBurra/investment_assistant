@@ -1,0 +1,18 @@
+AKBNK industry: Banking Services  price: 29.38  fk: 2.23  enfk: 4.73
+AKFGY industry: Residential & Commercial REITs  price: 4.420  fk: 1.29  enfk: 3.03
+AKSA industry: Textiles & Apparel  price: 80.75  fk: 7.9  enfk: 27.55
+AYDEM industry: Electrical Utilities & IPPs  price: 19.05  fk: -10.15  enfk: 10.02
+BUCIM industry: Metals & Mining  price: 8.17  fk: 8.43  enfk: 19.77
+CEMTS industry: Metals & Mining  price: 14.290  fk: 8.17  enfk: 19.77
+ENJSA industry: Electrical Utilities & IPPs  price: 52.95  fk: 3.99  enfk: 10.02
+GSDHO industry: Freight & Logistics Services  price: 4.610  fk: 4.07  enfk: 20.5
+IZMDC industry: Metals & Mining  price: 7.980  fk: -79.81  enfk: 19.77
+ISGYO industry: Residential & Commercial REITs  price: 19.650  fk: 1.43  enfk: 3.03
+ISDMR industry: Metals & Mining  price: 41.500  fk: -56.76  enfk: 19.77
+OYAKC industry: Construction Materials  price: 62.600  fk: 11.21  enfk: 29.39
+SNGYO industry: Residential & Commercial REITs  price: 3.240  fk: 1.02  enfk: 3.03
+TKFEN industry: Construction & Engineering  price: 47.48  fk: 6.99  enfk: 26.72
+TUKAS industry: Food & Tobacco  price: 11.050  fk: 12.48  enfk: 73.66
+ULKER industry: Food & Tobacco  price: 66.80  fk: -808.46  enfk: 73.66
+VESTL industry: Computers, Phones & Household Electronics  price: 68.100  fk: -21.08  enfk: 68.74
+YYLGD industry: Food & Tobacco  price: 23.34  fk: 21.54  enfk: 73.66

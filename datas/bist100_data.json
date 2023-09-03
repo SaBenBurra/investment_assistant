@@ -1,0 +1,402 @@
+[
+    {
+        "symbol": "AGHOL",
+        "link": "/equities/yazicilar-holding"
+    },
+    {
+        "symbol": "AHGAZ",
+        "link": "/equities/ahlatci-dogal-gaz-dagitim-enerji"
+    },
+    {
+        "symbol": "AKBNK",
+        "link": "/equities/akbank"
+    },
+    {
+        "symbol": "AKCNS",
+        "link": "/equities/akcansa"
+    },
+    {
+        "symbol": "AKFGY",
+        "link": "/equities/akfen-gmyo"
+    },
+    {
+        "symbol": "AKSA",
+        "link": "/equities/aksa"
+    },
+    {
+        "symbol": "AKSEN",
+        "link": "/equities/aksa-enerji-uretim"
+    },
+    {
+        "symbol": "ALARK",
+        "link": "/equities/alarko-holding"
+    },
+    {
+        "symbol": "ALBRK",
+        "link": "/equities/albaraka-turk"
+    },
+    {
+        "symbol": "ALFAS",
+        "link": "/equities/alfa-solar-enerji-as"
+    },
+    {
+        "symbol": "AEFES",
+        "link": "/equities/anadolu-efes"
+    },
+    {
+        "symbol": "ASUZU",
+        "link": "/equities/anadolu-isuzu"
+    },
+    {
+        "symbol": "ARCLK",
+        "link": "/equities/arcelik"
+    },
+    {
+        "symbol": "ASELS",
+        "link": "/equities/aselsan"
+    },
+    {
+        "symbol": "ASTOR",
+        "link": "/equities/astor-enerji-as"
+    },
+    {
+        "symbol": "AYDEM",
+        "link": "/equities/aydem-yenilenebilir-enerji-as"
+    },
+    {
+        "symbol": "BAGFS",
+        "link": "/equities/bagfas"
+    },
+    {
+        "symbol": "BERA",
+        "link": "/equities/kombassan-holding-as"
+    },
+    {
+        "symbol": "BIMAS",
+        "link": "/equities/bim-magazalar"
+    },
+    {
+        "symbol": "BIOEN",
+        "link": "/equities/biotrend-cevre-ve-enerji-yat"
+    },
+    {
+        "symbol": "BRSAN",
+        "link": "/equities/borusan-mannesmann"
+    },
+    {
+        "symbol": "BRYAT",
+        "link": "/equities/borusan-yat.-paz."
+    },
+    {
+        "symbol": "BUCIM",
+        "link": "/equities/bursa-cimento"
+    },
+    {
+        "symbol": "CANTE",
+        "link": "/equities/can2-termik-as"
+    },
+    {
+        "symbol": "CEMTS",
+        "link": "/equities/cemtas"
+    },
+    {
+        "symbol": "CIMSA",
+        "link": "/equities/cimsa"
+    },
+    {
+        "symbol": "CCOLA",
+        "link": "/equities/coca-cola-icecek"
+    },
+    {
+        "symbol": "DOHOL",
+        "link": "/equities/dogan-holding"
+    },
+    {
+        "symbol": "DOAS",
+        "link": "/equities/dogus-otomotiv"
+    },
+    {
+        "symbol": "ECZYT",
+        "link": "/equities/eczacibasi-yatirim"
+    },
+    {
+        "symbol": "EGEEN",
+        "link": "/equities/ege-endustri"
+    },
+    {
+        "symbol": "ECILC",
+        "link": "/equities/eczacibasi-ilac"
+    },
+    {
+        "symbol": "EKGYO",
+        "link": "/equities/emlak-konut-gmyo"
+    },
+    {
+        "symbol": "ENJSA",
+        "link": "/equities/enerjisa-enerji"
+    },
+    {
+        "symbol": "ENKAI",
+        "link": "/equities/enka-insaat"
+    },
+    {
+        "symbol": "EREGL",
+        "link": "/equities/eregli-demir-celik"
+    },
+    {
+        "symbol": "EUREN",
+        "link": "/equities/europen-endustri-insaat-sanayi-ve"
+    },
+    {
+        "symbol": "FROTO",
+        "link": "/equities/ford-otosan"
+    },
+    {
+        "symbol": "GWIND",
+        "link": "/equities/galata-wind-enerji-anonim-sirket"
+    },
+    {
+        "symbol": "GARAN",
+        "link": "/equities/garanti-bankasi"
+    },
+    {
+        "symbol": "GENIL",
+        "link": "/equities/gen-ilac-ve-saglik-urunleri"
+    },
+    {
+        "symbol": "GESAN",
+        "link": "/equities/girisim-elektrik-taahhut"
+    },
+    {
+        "symbol": "GLYHO",
+        "link": "/equities/global-yat.-holding"
+    },
+    {
+        "symbol": "GSDHO",
+        "link": "/equities/gsd-holding"
+    },
+    {
+        "symbol": "GUBRF",
+        "link": "/equities/gubre-fabrik."
+    },
+    {
+        "symbol": "HEKTS",
+        "link": "/equities/hektas"
+    },
+    {
+        "symbol": "IZMDC",
+        "link": "/equities/izmir-demir-celik"
+    },
+    {
+        "symbol": "IPEKE",
+        "link": "/equities/ipek-dogal-enerji"
+    },
+    {
+        "symbol": "ISGYO",
+        "link": "/equities/is-gmyo"
+    },
+    {
+        "symbol": "ISMEN",
+        "link": "/equities/is-y.-men.-deg."
+    },
+    {
+        "symbol": "ISDMR",
+        "link": "/equities/iskenderun-demir-ve-celik-as"
+    },
+    {
+        "symbol": "KRDMD",
+        "link": "/equities/kardemir-(d)"
+    },
+    {
+        "symbol": "KARSN",
+        "link": "/equities/karsan-otomotiv"
+    },
+    {
+        "symbol": "KMPUR",
+        "link": "/equities/kimteks-poliuretan-sanayi-ve"
+    },
+    {
+        "symbol": "KZBGY",
+        "link": "/equities/kizilbuk-gayrimenkul-yatirim-ortakl"
+    },
+    {
+        "symbol": "KCHOL",
+        "link": "/equities/koc-holding"
+    },
+    {
+        "symbol": "KCAER",
+        "link": "/equities/kocaer-celik-sanayi-ve-ticaret-as"
+    },
+    {
+        "symbol": "KONTR",
+        "link": "/equities/kontrolmatik-teknoloji-enerji-ve-mu"
+    },
+    {
+        "symbol": "KONYA",
+        "link": "/equities/konya-cimento"
+    },
+    {
+        "symbol": "KORDS",
+        "link": "/equities/kordsa-global"
+    },
+    {
+        "symbol": "KOZAL",
+        "link": "/equities/koza-altin"
+    },
+    {
+        "symbol": "KOZAA",
+        "link": "/equities/koza-madencilik"
+    },
+    {
+        "symbol": "MAVI",
+        "link": "/equities/mavi-giyim-sanayi-ve-ticaret-as"
+    },
+    {
+        "symbol": "MGROS",
+        "link": "/equities/migros-ticaret"
+    },
+    {
+        "symbol": "ODAS",
+        "link": "/equities/odas-elektrik"
+    },
+    {
+        "symbol": "OTKAR",
+        "link": "/equities/otokar"
+    },
+    {
+        "symbol": "OYAKC",
+        "link": "/equities/mardin-cimento"
+    },
+    {
+        "symbol": "PSGYO",
+        "link": "/equities/pasifik-gayrimenkul-yatirim"
+    },
+    {
+        "symbol": "PGSUS",
+        "link": "/equities/pegasus-hava-tasimaciligi"
+    },
+    {
+        "symbol": "ZRGYO",
+        "link": "/equities/penta-teknoloji-urunleri"
+    },
+    {
+        "symbol": "PETKM",
+        "link": "/equities/petkim"
+    },
+    {
+        "symbol": "QUAGR",
+        "link": "/equities/qua-granite-hayal"
+    },
+    {
+        "symbol": "SAHOL",
+        "link": "/equities/sabanci-holding"
+    },
+    {
+        "symbol": "SASA",
+        "link": "/equities/sasa-polyester"
+    },
+    {
+        "symbol": "SKBNK",
+        "link": "/equities/sekerbank"
+    },
+    {
+        "symbol": "SELEC",
+        "link": "/equities/selcuk-ecza-deposu"
+    },
+    {
+        "symbol": "SNGYO",
+        "link": "/equities/sinpas-gmyo"
+    },
+    {
+        "symbol": "SISE",
+        "link": "/equities/sise-cam"
+    },
+    {
+        "symbol": "SMRTG",
+        "link": "/equities/smart-gunes-enerjisi-teknolojileri"
+    },
+    {
+        "symbol": "SOKM",
+        "link": "/equities/sok-marketler"
+    },
+    {
+        "symbol": "TAVHL",
+        "link": "/equities/tav-havalimanlari"
+    },
+    {
+        "symbol": "TKFEN",
+        "link": "/equities/tekfen-holding"
+    },
+    {
+        "symbol": "TKNSA",
+        "link": "/equities/teknosa-ic-ve-dis-ticaret-as"
+    },
+    {
+        "symbol": "THYAO",
+        "link": "/equities/turk-hava-yollari"
+    },
+    {
+        "symbol": "TOASO",
+        "link": "/equities/tofas-oto.-fab."
+    },
+    {
+        "symbol": "TSKB",
+        "link": "/equities/t.s.k.b."
+    },
+    {
+        "symbol": "TUKAS",
+        "link": "/equities/tukas"
+    },
+    {
+        "symbol": "TUPRS",
+        "link": "/equities/tupras"
+    },
+    {
+        "symbol": "TTKOM",
+        "link": "/equities/turk-telekom"
+    },
+    {
+        "symbol": "TTRAK",
+        "link": "/equities/turk-traktor"
+    },
+    {
+        "symbol": "TCELL",
+        "link": "/equities/turkcell"
+    },
+    {
+        "symbol": "HALKB",
+        "link": "/equities/t.-halk-bankasi"
+    },
+    {
+        "symbol": "ISCTR",
+        "link": "/equities/is-bankasi-(c)"
+    },
+    {
+        "symbol": "ULKER",
+        "link": "/equities/ulker-biskuvi"
+    },
+    {
+        "symbol": "VAKBN",
+        "link": "/equities/vakiflar-bankasi"
+    },
+    {
+        "symbol": "VESTL",
+        "link": "/equities/vestel"
+    },
+    {
+        "symbol": "VESBE",
+        "link": "/equities/vestel-beyaz-esya"
+    },
+    {
+        "symbol": "YKBNK",
+        "link": "/equities/yapi-ve-kredi-bank."
+    },
+    {
+        "symbol": "YYLGD",
+        "link": "/equities/yayla-agro-gida-sanayi-ve-ticaret"
+    },
+    {
+        "symbol": "ZOREN",
+        "link": "/equities/zorlu-enerji"
+    }
+]
