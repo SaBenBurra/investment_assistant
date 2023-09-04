@@ -1,4 +1,6 @@
 import math
+from bs4 import BeautifulSoup
+from lxml import etree
 
 
 def pretty_print(d, indent=2):
@@ -62,3 +64,9 @@ def format_number(param, as_float_str=False):
 #         #     return float("{:.2f}".format(round(num, 2)))
 
 #     return int(num)
+
+
+def get_dom_by_page_source(source):
+    soup = BeautifulSoup(source, "html.parser")
+    dom = etree.HTML(str(soup))
+    return dom

@@ -4,12 +4,8 @@ from helpers import pretty_print, format_number
 
 
 def print_stock(stock: Stock):
-    print("toplam:" + str(stock.total_assets[2]))
-    print("dönen:" + str(stock.current_assets[2]))
-    print("duran:" + str(stock.fixed_assets[2]))
     statistics_table = PrettyTable(padding_width=3)
     ratios_table = PrettyTable(padding_width=3)
-
     ratios_table.field_names = ["Oran", "Hisse", "Sektör"]
     ratios_table.add_row(
         [

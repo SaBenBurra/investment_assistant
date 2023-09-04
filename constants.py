@@ -8,6 +8,7 @@ xpaths = {
     "indf/k": "/html/body/div[6]/section/table/tbody/tr[2]/td/div/table/tbody/tr[1]/td[3]",
     "pd/dd": "/html/body/div[6]/section/table/tbody/tr[2]/td/div/table/tbody/tr[5]/td[2]",
     "indpd/dd": "/html/body/div[6]/section/table/tbody/tr[2]/td/div/table/tbody/tr[5]/td[3]",
+    "price": "/html/body/div/div[2]/div[2]/div[1]/div[1]/div[3]/div/div[1]/div[1]",
     "balance_sheet": [
         {
             "year": "/html/body/table/tbody[1]/tr/th[2]/span",

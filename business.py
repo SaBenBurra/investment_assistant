@@ -4,11 +4,12 @@ from bs4 import BeautifulSoup
 from models.stock import Stock
 from constants import links, xpaths
 from lxml import etree
-from helpers import pretty_print, reverse_date, format_number
+from helpers import pretty_print, reverse_date, format_number, get_dom_by_page_source
 from tui import print_stock
 
 
 def get_stock_data(stock_code):
+    stock_code = stock_code.upper()
     json_stock_data = get_stock_data_from_json(stock_code)
 
     ratios_link = links["base_link"] + json_stock_data["link"] + "-ratios"
@@ -78,3 +79,14 @@ def get_stock_data(stock_code):
             format_number(dom.xpath(incomestatementxpath["net_profit"])[0].text)
         )
     print_stock(stock)
+
+
+def get_stock_price(symbol):
+    symbol = symbol.upper()
+    json_stock_data = get_stock_data_from_json(symbol)
+    url = links["base_link"] + json_stock_data["link"]
+    page_source = get_page_source_with_selenium(url)
+    dom = get_dom_by_page_source(page_source)
+    price = dom.xpath(xpaths["price"])[0].text
+    print(price, "TL")
+    return price

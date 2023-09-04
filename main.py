@@ -1,8 +1,23 @@
 import sys
-from business import get_stock_data
+from business import get_stock_data, get_stock_price
 
-if len(sys.argv) > 1:
-    stock_symbol = sys.argv[1]
-else:
-    stock_symbol = input("Sembol girin: ")
-get_stock_data(stock_symbol.upper())
+first = True
+while True:
+    print(
+        """
+1- Fiyat Sorgulama
+2- Analiz Verisi Görüntüleme
+    
+          """
+    )
+    process_number = input("Lütfen işlem seçiniz: ")
+    if process_number == "1":
+        symbol = input("Hisse sembolü giriniz: ")
+        print("\n\n")
+        get_stock_price(symbol)
+    elif process_number == "2":
+        symbol = input("Hİsse sembolü giriniz: ")
+        print("\n\n")
+        get_stock_data(symbol)
+
+    input()
