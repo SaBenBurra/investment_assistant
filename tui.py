@@ -20,7 +20,16 @@ def print_stock(stock: Stock):
             "PD/DD",
             format_number(str(stock.pddd), as_float_str=True),
             format_number(str(stock.indpddd), as_float_str=True),
-        ]
+        ],
+        divider=True,
+    )
+    ratios_table.add_row(
+        [
+            "Favök marjı (Faaliyet Karlılığı)",
+            format_number(str(stock.ebitda_margin), as_float_str=True),
+            format_number(str(stock.ind_ebitda_margin), as_float_str=True),
+        ],
+        divider=True,
     )
 
     statistics_table.field_names = ["Veri", *stock.dates]

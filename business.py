@@ -1,4 +1,8 @@
-from data_access.filesystem import get_stock_data_from_json
+from data_access.filesystem import (
+    get_stock_data_from_json,
+    cache_stock,
+    get_stock_from_cache_if_exists,
+)
 from data_access.web import get_page_source_with_requests, get_page_source_with_selenium
 from bs4 import BeautifulSoup
 from models.stock import Stock
@@ -10,6 +14,14 @@ from tui import print_stock
 
 def get_stock_data(stock_code):
     stock_code = stock_code.upper()
+    cache_check = get_stock_from_cache_if_exists(stock_code)
+    if cache_check != False:
+        cached_data = cache_check
+        stock = Stock()
+        for attribute, value in cached_data.items():
+            setattr(stock, attribute, value)
+        print_stock(stock)
+        return
     json_stock_data = get_stock_data_from_json(stock_code)
 
     ratios_link = links["base_link"] + json_stock_data["link"] + "-ratios"
@@ -35,11 +47,18 @@ def get_stock_data(stock_code):
     stock.indfk = format_number(dom.xpath(xpaths["indf/k"])[0].text)
     stock.pddd = format_number(dom.xpath(xpaths["pd/dd"])[0].text)
     stock.indpddd = format_number(dom.xpath(xpaths["indpd/dd"])[0].text)
+    stock.ebitda_margin = format_number(dom.xpath(xpaths["ebitda_margin"])[0].text)
+    stock.ind_ebitda_margin = format_number(
+        dom.xpath(xpaths["ind_ebitda_margin"])[0].text
+    )
 
     for balancesheetxpath in xpaths["balance_sheet"]:
         dom = etree.HTML(str(balance_sheet_soup))
         year = dom.xpath(balancesheetxpath["year"])[0].text
         period = dom.xpath(balancesheetxpath["period"])[0].text
+        if year is None or period is None:
+            year = "-"
+            period = "-"
         stock.dates.append(period + "/" + year)
         current_assets = format_number(
             dom.xpath(balancesheetxpath["current_assets"])[0].text
@@ -78,6 +97,7 @@ def get_stock_data(stock_code):
         stock.net_profits.append(
             format_number(dom.xpath(incomestatementxpath["net_profit"])[0].text)
         )
+    cache_stock(stock)
     print_stock(stock)
 
 

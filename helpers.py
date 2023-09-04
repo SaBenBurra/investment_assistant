@@ -40,8 +40,10 @@ def format_number(param, as_float_str=False):
                 dot_index = param.rfind(".")
                 param = param[:dot_index] + "," + param[dot_index + 1 :]
                 return param
-
-            return float(param)
+            try:
+                return float(param)
+            except:
+                return 0.0
 
     if isinstance(param, float):
         rounded_value = round(param, 2)
