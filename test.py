@@ -1,7 +1,6 @@
-import requests
+from helpers import format_number
 
-print(
-    requests.get(
-        "https://www.investing.com/instruments/Financials/changereporttypeajax?action=change_report_type&pair_ID=19557&report_type=INC&period_type=Annual"
-    ).text
-)
+
+value = "-1053.06"
+
+print(format_number(value, as_float_str=True))

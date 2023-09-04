@@ -41,11 +41,11 @@ def get_stock_data(stock_code):
         period = dom.xpath(balancesheetxpath["period"])[0].text
         stock.dates.append(period + "/" + year)
         current_assets = format_number(
-            dom.xpath(balancesheetxpath["current_assets"])[0].text.replace(",", ".")
+            dom.xpath(balancesheetxpath["current_assets"])[0].text
         )
 
         total_assets = format_number(
-            dom.xpath(balancesheetxpath["total_assets"])[0].text.replace(",", ".")
+            dom.xpath(balancesheetxpath["total_assets"])[0].text
         )
 
         stock.current_assets.append(current_assets)
@@ -53,46 +53,28 @@ def get_stock_data(stock_code):
 
         stock.fixed_assets.append(format_number(total_assets - current_assets))
         short_term_debts = format_number(
-            dom.xpath(balancesheetxpath["short_term_debts"])[0].text.replace(",", ".")
+            dom.xpath(balancesheetxpath["short_term_debts"])[0].text
         )
         stock.short_term_debts.append(short_term_debts)
-        total_debts = format_number(
-            dom.xpath(balancesheetxpath["total_debts"])[0].text.replace(",", ".")
-        )
+        total_debts = format_number(dom.xpath(balancesheetxpath["total_debts"])[0].text)
         stock.long_term_debts.append(format_number(total_debts - short_term_debts))
         stock.total_debts.append(total_debts)
         stock.total_equities.append(
-            format_number(
-                dom.xpath(balancesheetxpath["total_equities"])[0].text.replace(",", ".")
-            )
+            format_number(dom.xpath(balancesheetxpath["total_equities"])[0].text)
         )
 
     for incomestatementxpath in xpaths["income_statement"]:
         dom = etree.HTML(str(income_statement_soup))
         stock.total_revenues.append(
-            format_number(
-                dom.xpath(incomestatementxpath["total_revenue"])[0].text.replace(
-                    ",", "."
-                )
-            )
+            format_number(dom.xpath(incomestatementxpath["total_revenue"])[0].text)
         )
         stock.gross_profits.append(
-            format_number(
-                dom.xpath(incomestatementxpath["gross_profit"])[0].text.replace(
-                    ",", "."
-                )
-            )
+            format_number(dom.xpath(incomestatementxpath["gross_profit"])[0].text)
         )
         stock.operating_incomes.append(
-            format_number(
-                dom.xpath(incomestatementxpath["operating_income"])[0].text.replace(
-                    ",", "."
-                )
-            )
+            format_number(dom.xpath(incomestatementxpath["operating_income"])[0].text)
         )
         stock.net_profits.append(
-            format_number(
-                dom.xpath(incomestatementxpath["net_profit"])[0].text.replace(",", ".")
-            )
+            format_number(dom.xpath(incomestatementxpath["net_profit"])[0].text)
         )
     print_stock(stock)
