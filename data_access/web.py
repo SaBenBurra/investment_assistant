@@ -12,6 +12,7 @@ def get_page_source_with_selenium(
     url,
     chrome_driver_path=None,
     user_agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Safari/537.36",
+    log=False,
 ):
     start_time = time.time()
 
@@ -36,14 +37,17 @@ def get_page_source_with_selenium(
         service = Service(chrome_driver_path)
         driver = webdriver.Chrome(service=service, options=options)
 
-    driver = webdriver.Chrome(options=options)
+    else:
+        driver = webdriver.Chrome(options=options)
     wait = WebDriverWait(driver, 20)
 
     driver.get(url)
     wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, "body :last-child")))
     driver.execute_script("window.stop();")
 
-    print("Scraped successfully. Elapsed time " + str(time.time() - start_time))
+    if log:
+        print("Scraped successfully. Elapsed time " + str(time.time() - start_time))
+
     return driver.page_source
 
 

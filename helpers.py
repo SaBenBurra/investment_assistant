@@ -12,3 +12,14 @@ def reverse_date(date):
     reversed_parts = parts[::-1]
     reversed_date = "/".join(reversed_parts)
     return reversed_date
+
+
+def format_number(num):
+    if isinstance(num, float):
+        decimal_part = num - int(num)
+        if decimal_part < 0.01:
+            return float("{:.2f}".format(num))
+        else:
+            return float("{:.2f}".format(round(num, 2)))
+    else:
+        return float(num)

@@ -7,9 +7,12 @@ class Stock:
     symbol: str = ""
     fk: float = 0.0
     indfk: float = 0.0
+    pddd: float = 0.0
+    indpddd: float = 0.0
     dates: List[int] = field(default_factory=list)
     current_assets: List[int] = field(default_factory=list)
     fixed_assets: List[int] = field(default_factory=list)
+    total_assets: List[int] = field(default_factory=list)
     short_term_debts: List[int] = field(default_factory=list)
     long_term_debts: List[int] = field(default_factory=list)
     total_debts: List[int] = field(default_factory=list)
