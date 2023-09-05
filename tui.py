@@ -111,7 +111,7 @@ def print_stock(stock: Stock):
     )
     statistics_table.add_row(
         [
-            "Satış gelirleri (Hasılat)",
+            "Toplam gelirler",
             *[
                 format_number(element, as_float_str=True)
                 for element in stock.total_revenues
