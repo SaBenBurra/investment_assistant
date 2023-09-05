@@ -1,4 +1,4 @@
-from prettytable import PrettyTable
+from prettytable import PrettyTable, ORGMODE
 from models.stock import Stock
 from helpers import pretty_print, format_number
 from constants import links
@@ -6,6 +6,8 @@ from constants import links
 
 def print_stock(stock: Stock):
     statistics_table = PrettyTable(padding_width=3)
+    statistics_table.set_style(ORGMODE)
+    statistics_table.header = False
     ratios_table = PrettyTable(padding_width=3)
     ratios_table.field_names = ["Oran", "Hisse", "Sektör"]
     ratios_table.add_row(
@@ -36,7 +38,7 @@ def print_stock(stock: Stock):
         ["ROE", format_number(str(stock.roes[0]), as_float_str=True), "-"]
     )
 
-    statistics_table.field_names = ["Veri", *stock.dates]
+    statistics_table.add_row(["", *stock.dates], divider=True)
     statistics_table.add_row(
         [
             "Dönen varlıklar ",
@@ -157,5 +159,6 @@ def print_stock(stock: Stock):
 
     print("Sembol: " + stock.symbol)
     print(ratios_table)
+    print("\n")
     print(statistics_table)
     print("\nGrafik linki: " + links["stock_chart"].format(stock.pair_id))
