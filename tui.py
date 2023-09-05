@@ -162,3 +162,16 @@ def print_stock(stock: Stock):
     print("\n")
     print(statistics_table)
     print("\nGrafik linki: " + links["stock_chart"].format(stock.pair_id))
+
+
+def print_stock_price(stock_price_data):
+    price = stock_price_data[0]
+    sign = stock_price_data[1]
+    if sign == "+":
+        ratio = "\033[92m" + sign + stock_price_data[2] + "%"
+    elif sign == "-":
+        ratio = "\033[91m" + sign + stock_price_data[2] + "%"
+    else:
+        ratio = ""
+
+    print(price + "TL   " + ratio + "\033[0m")

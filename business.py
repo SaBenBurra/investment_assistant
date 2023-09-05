@@ -9,8 +9,14 @@ from bs4 import BeautifulSoup
 from models.stock import Stock
 from constants import links, xpaths
 from lxml import etree
-from helpers import pretty_print, reverse_date, format_number, get_dom_by_page_source
-from tui import print_stock
+from helpers import (
+    pretty_print,
+    reverse_date,
+    format_number,
+    get_dom_by_page_source,
+    get_content_in_parentheses,
+)
+from tui import print_stock, print_stock_price
 
 
 def get_stock_data(stock_code):
@@ -107,6 +113,10 @@ def get_stock_data(stock_code):
     i = 0
     for net_profit in stock.net_profits:
         total_equity = stock.total_equities[i]
+        if total_equity == 0:
+            roe = "?"
+            roes.append(roe)
+            continue
         roe = format_number(net_profit / total_equity)
         roes.append(roe)
 
@@ -123,8 +133,17 @@ def get_stock_price(symbol):
     page_source = get_page_source_with_selenium(url)
     dom = get_dom_by_page_source(page_source)
     price = dom.xpath(xpaths["price"])[0].text
-    print(price, "TL")
-    return price
+    increase_ratio_data = dom.xpath(xpaths["rafe_of_increase"] + "/text()")
+    if increase_ratio_data[1] == "+":
+        increase_ratio_sign = "+"
+        increase_ratio = increase_ratio_data[2]
+    elif increase_ratio_data[1][0] == "-":
+        increase_ratio_sign = "-"
+        increase_ratio = increase_ratio_data[1][1:]
+    else:
+        increase_ratio_sign = ""
+        increase_ratio = ""
+    print_stock_price([price, increase_ratio_sign, increase_ratio])
 
 
 def check_if_symbol_valid(symbol):

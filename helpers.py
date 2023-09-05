@@ -1,3 +1,4 @@
+import re
 import math
 from bs4 import BeautifulSoup
 from lxml import etree
@@ -72,3 +73,23 @@ def get_dom_by_page_source(source):
     soup = BeautifulSoup(source, "html.parser")
     dom = etree.HTML(str(soup))
     return dom
+
+
+def get_content_in_parentheses(string):
+    pattern = r"\((.*?)\)"
+
+    match = re.search(pattern, string)
+
+    if match:
+        content = match.group(1)
+        return content
+    else:
+        return None
+
+
+def is_string_float(string):
+    try:
+        float(string)
+        return True
+    except:
+        return False
