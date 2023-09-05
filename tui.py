@@ -1,6 +1,7 @@
 from prettytable import PrettyTable
 from models.stock import Stock
 from helpers import pretty_print, format_number
+from constants import links
 
 
 def print_stock(stock: Stock):
@@ -157,3 +158,4 @@ def print_stock(stock: Stock):
     print("Sembol: " + stock.symbol)
     print(ratios_table)
     print(statistics_table)
+    print("\nGrafik linki: " + links["stock_chart"].format(stock.pair_id))

@@ -28,6 +28,7 @@ def get_stock_data(stock_code):
         return
     json_stock_data = get_stock_data_from_json(stock_code)
 
+    pair_id = json_stock_data["pair_id"]
     ratios_link = links["base_link"] + json_stock_data["link"] + "-ratios"
     balance_sheet_link = links["balance_sheet_table"].format(json_stock_data["pair_id"])
     income_statement_link = links["income_statement_table"].format(
@@ -44,7 +45,7 @@ def get_stock_data(stock_code):
     balance_sheet_soup = BeautifulSoup(balance_sheet_page_source, "html.parser")
     income_statement_soup = BeautifulSoup(income_statement_page_source, "html.parser")
 
-    stock = Stock(symbol=json_stock_data["symbol"])
+    stock = Stock(symbol=json_stock_data["symbol"], pair_id=pair_id)
 
     dom = etree.HTML(str(ratios_soup))
     stock.fk = format_number(dom.xpath(xpaths["f/k"])[0].text)

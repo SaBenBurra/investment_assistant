@@ -2,6 +2,7 @@ links = {
     "base_link": "https://www.investing.com",
     "income_statement_table": "https://www.investing.com/instruments/Financials/changereporttypeajax?action=change_report_type&pair_ID={}&report_type=INC&period_type=Annual",
     "balance_sheet_table": "https://tr.investing.com/instruments/Financials/changereporttypeajax?action=change_report_type&pair_ID={}&report_type=BAL&period_type=Annual",
+    "stock_chart": "https://tr.investing.com/charts/advinion.php?version=6.3.1.0&domain_ID=10&lang_ID=10&timezone_ID=63&pair_ID={}&interval=1D&majors=new_touch_pairs_stocks",
 }
 xpaths = {
     "f/k": '//*[@id="childTr"]/td/div/table/tbody/tr[1]/td[2]',

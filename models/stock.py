@@ -5,6 +5,7 @@ from typing import List
 @dataclass
 class Stock:
     symbol: str = ""
+    pair_id: str = ""
     fk: float = 0.0
     indfk: float = 0.0
     pddd: float = 0.0
