@@ -54,3 +54,9 @@ def get_stock_from_cache_if_exists(symbol):
                 return False
             return data["data"]
     return False
+
+
+def get_all_stock_data():
+    file = open("datas/pair_all_data.json", "r")
+    all_data = json.load(file)
+    return all_data

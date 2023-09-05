@@ -16,7 +16,7 @@ while True:
         print("\n\n")
         get_stock_price(symbol)
     elif process_number == "2":
-        symbol = input("Hİsse sembolü giriniz: ")
+        symbol = input("Hisse sembolü giriniz: ")
         print("\n\n")
         get_stock_data(symbol)
 

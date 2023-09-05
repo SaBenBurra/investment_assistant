@@ -2,6 +2,7 @@ from data_access.filesystem import (
     get_stock_data_from_json,
     cache_stock,
     get_stock_from_cache_if_exists,
+    get_all_stock_data,
 )
 from data_access.web import get_page_source_with_requests, get_page_source_with_selenium
 from bs4 import BeautifulSoup
@@ -14,6 +15,9 @@ from tui import print_stock
 
 def get_stock_data(stock_code):
     stock_code = stock_code.upper()
+    if check_if_symbol_valid(stock_code) is False:
+        print("Geçersiz sembol")
+        return
     cache_check = get_stock_from_cache_if_exists(stock_code)
     if cache_check != False:
         cached_data = cache_check
@@ -120,3 +124,12 @@ def get_stock_price(symbol):
     price = dom.xpath(xpaths["price"])[0].text
     print(price, "TL")
     return price
+
+
+def check_if_symbol_valid(symbol):
+    all_data = get_all_stock_data()
+    for data in all_data:
+        if data["symbol"] == symbol.upper():
+            return True
+
+    return False
