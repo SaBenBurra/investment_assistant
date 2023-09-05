@@ -97,6 +97,16 @@ def get_stock_data(stock_code):
         stock.net_profits.append(
             format_number(dom.xpath(incomestatementxpath["net_profit"])[0].text)
         )
+
+    roes = []
+    i = 0
+    for net_profit in stock.net_profits:
+        total_equity = stock.total_equities[i]
+        roe = format_number(net_profit / total_equity)
+        roes.append(roe)
+
+    stock.roes = roes
+
     cache_stock(stock)
     print_stock(stock)
 

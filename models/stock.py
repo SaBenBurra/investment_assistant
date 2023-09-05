@@ -11,6 +11,7 @@ class Stock:
     indpddd: float = 0.0
     ebitda_margin: float = 0.0
     ind_ebitda_margin: float = 0.0
+    roes: List[float] = field(default_factory=list)
     dates: List[int] = field(default_factory=list)
     current_assets: List[int] = field(default_factory=list)
     fixed_assets: List[int] = field(default_factory=list)

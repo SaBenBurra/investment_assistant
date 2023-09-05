@@ -31,6 +31,9 @@ def print_stock(stock: Stock):
         ],
         divider=True,
     )
+    ratios_table.add_row(
+        ["ROE", format_number(str(stock.roes[0]), as_float_str=True), "-"]
+    )
 
     statistics_table.field_names = ["Veri", *stock.dates]
     statistics_table.add_row(
@@ -140,6 +143,13 @@ def print_stock(stock: Stock):
                 format_number(element, as_float_str=True)
                 for element in stock.net_profits
             ],
+        ],
+        divider=True,
+    )
+    statistics_table.add_row(
+        [
+            "Roe değeri",
+            *[format_number(element, as_float_str=True) for element in stock.roes],
         ],
         divider=True,
     )
