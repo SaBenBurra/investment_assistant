@@ -50,7 +50,7 @@ def get_stock_from_cache_if_exists(symbol):
     for data in all_data:
         if data["data"]["symbol"] == symbol.upper():
             cache_time = datetime.strptime(data["time"], "%Y-%m-%d %H:%M:%S.%f")
-            if (datetime.now() - cache_time) > timedelta(minutes=30):
+            if (datetime.now() - cache_time) > timedelta(days=1):
                 return False
             return data["data"]
     return False
